@@ -1,9 +1,9 @@
-library(pirouette)
+library(beautier)
 
 filename <- tempfile()
 
 utils::Rprof(filename)
-x <- create_std_pir_paramses(n = 10)
+check_inference_model(create_test_inference_model())
 utils::Rprof(NULL)
 print(utils::summaryRprof(filename))
 
